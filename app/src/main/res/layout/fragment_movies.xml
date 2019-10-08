@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:gravity="center_horizontal"
+        android:weightSum="10">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/movie_image_viewpager_height"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/movieImageViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:foregroundGravity="center_horizontal"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp">
+
+
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/margin_medium"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin_medium"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+        <include android:id="@+id/ly_movie_infos"
+            layout="@layout/movie_infos"/>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuyTickets"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:paddingLeft="@dimen/margin_medium_3x"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium_3x"
+            android:paddingBottom="@dimen/margin_medium"
+            android:text="Buy Tickets"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            app:cornerRadius="50dp"
+            app:rippleColor="@color/darkWhite"
+            app:strokeColor="@color/darkWhite"
+            app:strokeWidth="3dp" />
+        
+        <ImageView
+            android:id="@+id/ivDownArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down_arrow_24dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium_2x"/>
+
+    </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:progressTint="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="64dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_progress_bar"
+            android:elevation="@dimen/margin_small"
+            android:indeterminateOnly="true"/>
+
+    </RelativeLayout>
+</ScrollView>

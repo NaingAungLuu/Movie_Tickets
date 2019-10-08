@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_movie_name"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IT Chapter Two"
+            android:textSize="@dimen/textsize_medium_3x"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/tv_movie_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horror / Comedy"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/darkWhite"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_small"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:weightSum="3">
+
+            <!--        IMDB Rating-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tvImdb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.5"
+                    android:textSize="@dimen/textsize_medium_2x"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IMDB"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@android:color/darker_gray"
+                    />
+
+            </LinearLayout>
+
+            <!--        Rotten Tomato Values-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tvRottenTomato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="97%"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_medium_2x"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rotten Tomato"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@android:color/darker_gray"
+                    />
+
+            </LinearLayout>
+
+            <!--        Metacritic values-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tvMetacritics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75%"
+                    android:textSize="@dimen/textsize_medium_2x"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Metacritics"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="@android:color/darker_gray"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
